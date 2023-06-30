@@ -1,0 +1,76 @@
+.main_login{
+    display: flex;
+    margin-top: 5rem;
+    font-size: 1.8rem;
+    /* height: 70vh; */
+    justify-content: center;
+}
+.main_login .child_log{
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    flex-direction: column;
+}
+
+.main_login .child_log h1{
+    margin: 1rem 0rem;
+}
+.main_login .login_infield input{
+    width: 30vw;
+    height: 4rem;
+    padding-left: 0.5vw;
+    font-size: 1.6rem;
+    outline: none;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+}
+.main_login .keepLogin{
+    gap: 1rem;
+    display: flex;
+}
+.main_login .keepLogin input{
+    width: 3rem;
+    cursor: pointer;
+}
+
+
+.main_login .login_bottom{
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+.main_login .login_bottom button{
+    width: 30vw;
+    height: 6vh;
+    background-color: var(--primery_color);
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
+.main_login .login_bottom h4{
+    color: var(--primery_color);
+    cursor: pointer;
+}
+.main_login .login_bottom span{
+    color: var(--primery_color);
+    cursor: pointer;
+}
+
+@media(max-width:740px){
+
+    .main_login .child_log{
+        width: 90vw;
+    }
+    .main_login .login_bottom button{
+        width: 90vw;
+    }
+    .main_login .login_infield input{
+        width: 90vw;
+    }
+
+}
