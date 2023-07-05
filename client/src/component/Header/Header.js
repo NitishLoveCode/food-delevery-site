@@ -1,12 +1,20 @@
-import React from 'react'
 import "../Header/header.css"
 import {BsSearch} from "react-icons/bs"
 import {RxAvatar} from "react-icons/rx"
 import {AiOutlineMenu} from "react-icons/ai"
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react"
+
 
 export default function Header() {
+  const[loginInfo,setloginInfo]=useState()
+
+  useEffect(()=>{
+    const data= localStorage.getItem("loginInfo")
+    setloginInfo(JSON.parse(data))
+  },[])
+
   return (
     <header>
       <div className="menu_left">
@@ -39,9 +47,13 @@ export default function Header() {
           <div>
             <AiOutlineShoppingCart className='font3rem'/>
           </div>
-          <Link to={"/Login"}>
+          <Link to={`${loginInfo? '/account' :'/login'}`}>
           <div className='bg-gray flex user justify_canter border-radius width gray'>
-            <RxAvatar className='user gray'/>
+          {
+            loginInfo?.photoUrl ? <img className='user gray' src="https://lh3.googleusercontent.com/a/AAcHTtcpS_qMnltX2qnTdLSe6DQ5iInGUHZQc0IunMbunavgRQ=s96-c" alt={loginInfo.firstName} />:<RxAvatar className='user gray'/>
+
+          }
+            
           </div>
           </Link>
           <div className='only_mobile'>

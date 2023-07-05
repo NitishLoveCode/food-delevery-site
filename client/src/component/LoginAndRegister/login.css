@@ -1,12 +1,35 @@
 .main_login{
     display: flex;
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-size: 1.8rem;
     /* height: 70vh; */
     justify-content: center;
 }
+.main_login .register_with{
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.main_login .register_with button{
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    width: 5rem;
+    align-items: center;
+    display: flex;
+    height: 5rem;
+}
+.main_login .register_with .widthgoogle{
+    width: 6rem;
+    height: 6vh;
+}
+
+
 .main_login .child_log{
-    gap: 2rem;
+    gap: 1rem;
     display: flex;
     align-items: center;
     width: 30vw;
@@ -14,7 +37,7 @@
 }
 
 .main_login .child_log h1{
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
 }
 .main_login .login_infield input{
     width: 30vw;
@@ -59,6 +82,19 @@
 .main_login .login_bottom span{
     color: var(--primery_color);
     cursor: pointer;
+}
+@media(max-width:1000px){
+
+    .main_login .child_log{
+        width: 60vw;
+    }
+    .main_login .login_bottom button{
+        width: 60vw;
+    }
+    .main_login .login_infield input{
+        width: 60vw;
+    }
+
 }
 
 @media(max-width:740px){
